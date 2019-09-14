@@ -1,6 +1,11 @@
 <p class="text-xs-center">Войдите для работы</p>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
   <div
+    class="alert alert-{{message.type}}"
+    *ngIf="message.text"
+  >
+    {{message.text}}</div>
+  <div
     class="form-group"
     [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}"
   >
@@ -49,7 +54,7 @@
   </div>
   <div class="form-group">
     <p class="text-muted text-xs-center">
-      Нет аккаунта? <a href="#">Зарегистрироваться!</a>
+      Нет аккаунта? <a [routerLink]="'/registration'" >Зарегистрироваться!</a>
     </p>
   </div>
 </form>
