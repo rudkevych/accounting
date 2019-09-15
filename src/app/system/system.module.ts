@@ -10,6 +10,7 @@ import {SystemComponent} from './system.component';
 import {SystemRoutingModule} from './system-routing.module';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import {DropdownDirective} from './shared/directives/dropdown.directive';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
     RecordPageComponent,
     SystemComponent,
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    DropdownDirective
   ]
 })
 export class SystemModule {
