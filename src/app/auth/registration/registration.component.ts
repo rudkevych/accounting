@@ -20,7 +20,7 @@ export class RegistrationComponent implements OnInit {
 
   ngOnInit() {
     this.form = new FormGroup({
-      email: new FormControl(null, [Validators.required, Validators.email]),
+      email: new FormControl(null, [Validators.required, Validators.email], this.isDuplicateEmail.bind(this)),
       password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
       name: new FormControl(null, [Validators.required]),
       agree: new FormControl(false, [Validators.requiredTrue])
@@ -41,4 +41,16 @@ export class RegistrationComponent implements OnInit {
       });
   }
 
+  isDuplicateEmail(control: FormControl): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.userService.getUserByEmail(control.value)
+        .subscribe((users: User[]) => {
+          if (users && users.length > 0) {
+            resolve({duplicatedEmail: true});
+          } else {
+            resolve(null);
+          }
+        });
+    });
+  }
 }

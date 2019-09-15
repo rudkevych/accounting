@@ -2,39 +2,9 @@
   "users": [
     {
       "id": 1,
-      "email": "wfm@mail.ru",
-      "password": "12345678",
-      "name": "Администратор"
-    },
-    {
-      "id": 2,
       "email": "oksana.rudkevych@gmail.com",
       "password": "12345678",
       "name": "Oksana"
-    },
-    {
-      "email": "Koksana.rudkevych@gmail.com",
-      "password": "qwerty",
-      "name": "Koksana",
-      "id": 3
-    },
-    {
-      "email": "kkjj@gmail.com",
-      "password": "dfghjkllkjhgf",
-      "name": "Tteeme",
-      "id": 4
-    },
-    {
-      "email": "kkjj@gmail.com",
-      "password": "dfghjkllkjhgf",
-      "name": "Tteeme",
-      "id": 5
-    },
-    {
-      "email": "rfd32982@bcaoo.com",
-      "password": "ауауауау",
-      "name": "ауауауау",
-      "id": 6
     }
   ],
   "bill": {
