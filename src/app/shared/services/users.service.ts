@@ -12,4 +12,7 @@ export class UsersService {
     return this.httpClient.get<User[]>(`http://localhost:3000/users?email=${email}`);
   }
 
+  createNewUser(user: User): Observable<User> {
+    return this.httpClient.post<User>(`http://localhost:3000/users`, user);
+  }
 }

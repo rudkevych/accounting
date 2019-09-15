@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {UsersService} from '../../shared/services/users.service';
+import {User} from '../../shared/models/user.model';
 
 @Component({
   selector: 'rudkevycho-registration',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(private userService: UsersService) {
+  }
 
   ngOnInit() {
+    this.form = new FormGroup({
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      password: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+      name: new FormControl(null, [Validators.required]),
+      agree: new FormControl(false, [Validators.requiredTrue])
+    });
+  }
+
+  onSubmit() {
+    const {email, password, name} = this.form.value;
+    const newUser = new User(email, password, name);
+
+    this.userService.createNewUser(newUser)
+      .subscribe((user: User) => console.log(user));
   }
 
 }
