@@ -17,6 +17,24 @@
       "password": "qwerty",
       "name": "Koksana",
       "id": 3
+    },
+    {
+      "email": "kkjj@gmail.com",
+      "password": "dfghjkllkjhgf",
+      "name": "Tteeme",
+      "id": 4
+    },
+    {
+      "email": "kkjj@gmail.com",
+      "password": "dfghjkllkjhgf",
+      "name": "Tteeme",
+      "id": 5
+    },
+    {
+      "email": "rfd32982@bcaoo.com",
+      "password": "ауауауау",
+      "name": "ауауауау",
+      "id": 6
     }
   ],
   "bill": {

@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {UsersService} from '../../shared/services/users.service';
 import {User} from '../../shared/models/user.model';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'rudkevycho-registration',
@@ -12,7 +13,9 @@ export class RegistrationComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private userService: UsersService) {
+  constructor(
+    private userService: UsersService,
+    private router: Router) {
   }
 
   ngOnInit() {
@@ -29,7 +32,13 @@ export class RegistrationComponent implements OnInit {
     const newUser = new User(email, password, name);
 
     this.userService.createNewUser(newUser)
-      .subscribe((user: User) => console.log(user));
+      .subscribe(() => {
+        this.router.navigate(['/login'], {
+          queryParams: {
+            nowCanLogin: true
+          }
+        });
+      });
   }
 
 }

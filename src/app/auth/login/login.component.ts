@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 import {UsersService} from '../../shared/services/users.service';
@@ -17,22 +17,31 @@ export class LoginComponent implements OnInit {
   constructor(
     private userService: UsersService,
     private authService: AuthService,
-    private route: Router
-  ) {}
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
+  }
 
   form: FormGroup;
   message: Message;
 
   ngOnInit() {
     this.message = new Message('', 'danger');
+
+    this.route.queryParams.subscribe((params: Params) => {
+      if (params.nowCanLogin) {
+        this.showMessage(new Message('Zahodi Daragoj', 'success'));
+      }
+    });
+
     this.form = new FormGroup({
       email: new FormControl(null, [Validators.required, Validators.email]),
       password: new FormControl(null, [Validators.required, Validators.minLength(5)])
     });
   }
 
-  private showMessage(text: string, type: string = 'danger') {
-    this.message = new Message(text, type);
+  private showMessage(message: Message) {
+    this.message = message;
     window.setTimeout(() => {
       this.message.text = '';
     }, 5000);
@@ -51,12 +60,11 @@ export class LoginComponent implements OnInit {
             this.authService.login();
             // TODO: redirect
           } else {
-            this.showMessage('Пароль не верный');
+            this.showMessage(new Message('Пароль не верный', 'danger'));
           }
         } else {
-          this.showMessage('Такого пользователя не существует');
+          this.showMessage(new Message('Пароль не верный', 'danger'));
         }
       });
-
   }
 }
