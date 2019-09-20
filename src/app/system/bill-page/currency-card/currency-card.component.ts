@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, LOCALE_ID, OnInit} from '@angular/core';
+import {formatDate} from '@angular/common';
 
 @Component({
   selector: 'rudkevycho-currency-card',
@@ -8,11 +9,15 @@ import {Component, Input, OnInit} from '@angular/core';
 export class CurrencyCardComponent implements OnInit {
 
   @Input() currency: any;
-  date: any;
 
   currencies: string[] = ['GBP', 'JPY'];
+  constructor(@Inject(LOCALE_ID) private locale: string) {}
 
   ngOnInit() {
-    this.date = this.currency.date;
+  }
+
+  getDate() {
+    const date = new Date(this.currency.date);
+    return formatDate(date, 'dd.MM.yyyy', this.locale);
   }
 }
