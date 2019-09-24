@@ -13,5 +13,7 @@ export class EditCategoryComponent implements OnInit {
   ngOnInit() {
   }
 
-
+  onSubmit(form: NgForm) {
+    console.log(form);
+  }
 }

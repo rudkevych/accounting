@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Category} from '../models/category.model';
-import {User} from '../../../shared/models/user.model';
 import {Observable} from 'rxjs';
 
 
@@ -11,5 +10,9 @@ export class CategoriesService {
 
   addCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(`http://localhost:3000/categories`, category);
+  }
+
+  getCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(`http://localhost:3000/categories`);
   }
 }
