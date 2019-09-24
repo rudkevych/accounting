@@ -13,6 +13,11 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import {DropdownDirective} from './shared/directives/dropdown.directive';
 import { BillCardComponent } from './bill-page/bill-card/bill-card.component';
 import { CurrencyCardComponent } from './bill-page/currency-card/currency-card.component';
+import { AddEventComponent } from './record-page/add-event/add-event.component';
+import { AddCategoryComponent } from './record-page/add-category/add-category.component';
+import { EditCategoryComponent } from './record-page/edit-category/edit-category.component';
+import {CategoriesService} from './shared/services/categories.service';
+import {BillService} from './shared/services/bill.service';
 
 @NgModule({
   imports: [
@@ -30,7 +35,14 @@ import { CurrencyCardComponent } from './bill-page/currency-card/currency-card.c
     HeaderComponent,
     DropdownDirective,
     BillCardComponent,
-    CurrencyCardComponent
+    CurrencyCardComponent,
+    AddEventComponent,
+    AddCategoryComponent,
+    EditCategoryComponent
+  ],
+  providers: [
+    BillService,
+    CategoriesService
   ]
 })
 export class SystemModule {
