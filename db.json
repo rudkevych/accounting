@@ -23,14 +23,9 @@
       "id": 2
     },
     {
-      "id": 3,
-      "name": "Машина",
-      "capacity": 7000
-    },
-    {
-      "name": "fefe",
-      "capacity": 156,
-      "id": 4
+      "name": "fefef",
+      "capacity": 145,
+      "id": 3
     }
   ],
   "events": [
