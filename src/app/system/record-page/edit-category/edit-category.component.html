@@ -17,8 +17,14 @@
         <select
           class="form-control"
           id="e-select-category"
+          [(ngModel)]="currentCategoryId"
+          (change)="onCategoryChange()"
+          [ngModelOptions]="{standalone: true}"
         >
-          <option value="">test</option>
+          <option
+            *ngFor="let c of categories"
+            [value]="c.id"
+          >{{c.name}}</option>
         </select>
 
       </div>
@@ -35,7 +41,7 @@
           class="form-control"
           #name="ngModel"
           name="name"
-          ngModel
+          [ngModel]="currentCategory.name"
           required
         >
         <span
@@ -53,12 +59,11 @@
         >Введите лимит</label>
         <input
           type="number"
-          [ngModel]="1"
           id="e-category-value"
           class="form-control"
           #capacity="ngModel"
           name="capacity"
-          ngModel
+          [ngModel]="currentCategory.capacity"
           required
           min="1"
         >
