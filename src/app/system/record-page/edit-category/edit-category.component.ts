@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NgForm} from '@angular/forms';
 import {Category} from '../../shared/models/category.model';
+import {CategoriesService} from '../../shared/services/categories.service';
 
 @Component({
   selector: 'rudkevycho-edit-category',
@@ -10,12 +11,12 @@ import {Category} from '../../shared/models/category.model';
 export class EditCategoryComponent implements OnInit {
 
   @Input() categories: Category[] = [];
-  @Output() onCategoryAdd = new EventEmitter<Category>();
+  @Output() onCategoryEdit = new EventEmitter<Category>();
 
   currentCategoryId = 1;
   currentCategory: Category;
 
-  constructor() { }
+  constructor(private categoriesService: CategoriesService) {}
 
   ngOnInit() {
     this.onCategoryChange();
@@ -27,6 +28,15 @@ export class EditCategoryComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form);
+    let {name, capacity} = form.value;
+    if (capacity < 0) {
+      capacity *= -1;
+    }
+    const category = new Category(name, capacity, +this.currentCategoryId);
+
+    this.categoriesService.updateCategory(category)
+      .subscribe((category: Category) => {
+        this.onCategoryEdit.emit(category);
+      });
   }
 }

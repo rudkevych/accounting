@@ -6,7 +6,8 @@ import {Observable} from 'rxjs';
 
 @Injectable()
 export class CategoriesService {
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient) {
+  }
 
   addCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(`http://localhost:3000/categories`, category);
@@ -14,5 +15,9 @@ export class CategoriesService {
 
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`http://localhost:3000/categories`);
+  }
+
+  updateCategory(category: Category): Observable<Category> {
+    return this.http.put<Category>(`http://localhost:3000/categories/${category.id}`, category);
   }
 }
