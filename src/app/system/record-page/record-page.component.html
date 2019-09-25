@@ -12,12 +12,12 @@
      <rudkevycho-add-event></rudkevycho-add-event>
     </div>
     <div class="col-md-6">
-     <rudkevycho-add-category (onCategoryAdd)="newCategoryAdded($event)"></rudkevycho-add-category>
+     <rudkevycho-add-category (categoryAdd)="newCategoryAdded($event)"></rudkevycho-add-category>
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <rudkevycho-edit-category [categories]="categories" (onCategoryEdit)="categoryEdited($event)"></rudkevycho-edit-category>
+      <rudkevycho-edit-category [categories]="categories" (categoryEdit)="categoryEdited($event)"></rudkevycho-edit-category>
     </div>
   </div>
 </section>

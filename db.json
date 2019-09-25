@@ -36,6 +36,11 @@
       "name": "Koksana1",
       "capacity": 69,
       "id": 5
+    },
+    {
+      "name": "New category55",
+      "capacity": 155,
+      "id": 6
     }
   ],
   "events": [

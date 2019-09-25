@@ -12,7 +12,7 @@ import {Message} from '../../../shared/models/message.model';
 export class EditCategoryComponent implements OnInit {
 
   @Input() categories: Category[] = [];
-  @Output() onCategoryEdit = new EventEmitter<Category>();
+  @Output() categoryEdit = new EventEmitter<Category>();
 
   currentCategoryId = 1;
   currentCategory: Category;
@@ -32,15 +32,12 @@ export class EditCategoryComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    let {name, capacity} = form.value;
-    if (capacity < 0) {
-      capacity *= -1;
-    }
-    const category = new Category(name, capacity, +this.currentCategoryId);
+    const {name, capacity} = form.value;
+    const newCategory = new Category(name, Math.abs(capacity), +this.currentCategoryId);
 
-    this.categoriesService.updateCategory(category)
+    this.categoriesService.updateCategory(newCategory)
       .subscribe((category: Category) => {
-        this.onCategoryEdit.emit(category);
+        this.categoryEdit.emit(category);
         this.message.text = 'Category edited successfully';
         window.setTimeout(() => this.message.text = '', 3000);
       });
