@@ -1,7 +1,7 @@
 <div class="card">
   <div class="card-header bordered">
     <div class="header-block">
-      <h3 class="title">Изменить категорию</h3>
+      <h3 class="title">Add category</h3>
     </div>
   </div>
   <div class="card-block">
@@ -13,7 +13,10 @@
         class="form-group"
         [ngClass]="{'has-error': name.invalid && name.touched}"
       >
-        <label class="control-label" for="category-name">Введите название</label>
+        <label
+          class="control-label"
+          for="category-name"
+        >Write category name</label>
         <input
           type="text"
           id="category-name"
@@ -32,7 +35,7 @@
         class="form-group"
         [ngClass]="{'has-error': capacity.invalid && capacity.touched}"
       >
-        <label class="control-label" for="category-value">Введите лимит</label>
+        <label class="control-label" for="category-value">Write limit</label>
         <input
           type="number"
           [ngModel]="1"
@@ -50,7 +53,7 @@
         >Field can`t be empty
         </span>
       </div>
-      <button type="submit" class="btn btn-primary">Добавить</button>
+      <button type="submit" class="btn btn-primary">Add</button>
     </form>
   </div>
 </div>
