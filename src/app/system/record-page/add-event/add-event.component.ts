@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Category} from '../../shared/models/category.model';
+import * as moment from 'moment';
 import {NgForm} from '@angular/forms';
+import {RudkevychoEvent} from '../../shared/models/event.model';
 
 @Component({
   selector: 'rudkevycho-add-event',
@@ -20,7 +22,10 @@ export class AddEventComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    const {category, type, amount, description} = form.value;
+    const newEvent = new RudkevychoEvent(type, Math.abs(amount), +category, moment()
+      .format('DD.MM.YYYY HH:MM:SS'), description);
+    console.log(newEvent);
   }
 
 }

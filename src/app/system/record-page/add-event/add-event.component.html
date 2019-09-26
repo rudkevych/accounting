@@ -55,6 +55,24 @@
           *ngIf="amount.invalid && amount.touched"
         >Please write an amount</span>
       </div>
+
+      <div class="form-group" [ngClass]="{'has-error': description.invalid && description.touched}">
+        <label class="control-label" for="amount">Write a description</label>
+        <input
+          type="text"
+          id="description"
+          class="form-control"
+          name="description"
+          ngModel
+          #description="ngModel"
+          required
+        >
+        <span
+          class="form-help-text"
+          *ngIf="description.invalid && description.touched"
+        >Please write a description</span>
+      </div>
+
       <button
         type="submit"
         class="btn btn-primary"
