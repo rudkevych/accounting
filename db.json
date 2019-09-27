@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 1000,
+    "value": "1.0015113111111112e+341",
     "currency": "EUR"
   },
   "categories": [
@@ -63,6 +63,252 @@
       "date": "10.06.2017 14:01:58",
       "id": 5,
       "description": "Заправка + проход ТО"
+    },
+    {
+      "amount": 156,
+      "category": 2,
+      "date": "26.09.2019 15:09:34",
+      "description": "rhefccfyn",
+      "id": 6
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:89",
+      "description": "frfr",
+      "id": 7
+    },
+    {
+      "amount": 154,
+      "category": 1,
+      "date": "26.09.2019 15:09:85",
+      "description": "trtr54",
+      "id": 8
+    },
+    {
+      "amount": 154,
+      "category": 1,
+      "date": "26.09.2019 15:09:30",
+      "description": "trtr54",
+      "id": 9
+    },
+    {
+      "amount": 15,
+      "category": 1,
+      "date": "26.09.2019 15:09:28",
+      "description": "5t6565",
+      "id": 10
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:46",
+      "description": "r43r3",
+      "id": 11
+    },
+    {
+      "amount": 13,
+      "category": 1,
+      "date": "26.09.2019 15:09:70",
+      "description": "r43r3",
+      "id": 12
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:16",
+      "description": "jyjy",
+      "id": 13
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:67",
+      "description": "kmk",
+      "id": 14
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:55",
+      "description": "ww",
+      "id": 15
+    },
+    {
+      "amount": "1",
+      "category": 1,
+      "date": "26.09.2019 15:09:33",
+      "description": "wwf",
+      "id": 16
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:18",
+      "description": "r4r4",
+      "id": 17
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:16",
+      "description": "454",
+      "id": 18
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:60",
+      "description": "4567",
+      "id": 19
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:94",
+      "description": "r4gtg",
+      "id": 20
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:83",
+      "description": "gtgtg",
+      "id": 21
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:70",
+      "description": "dedede",
+      "id": 22
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:69",
+      "description": "grgr",
+      "id": 23
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:90",
+      "description": "fefefe",
+      "id": 24
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:49",
+      "description": "dede",
+      "id": 25
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:35",
+      "description": "frfr",
+      "id": 26
+    },
+    {
+      "amount": 16,
+      "category": 1,
+      "date": "26.09.2019 15:09:42",
+      "description": "ffrf3",
+      "id": 27
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 15:09:47",
+      "description": "gfgf",
+      "id": 28
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 16:09:24",
+      "description": "hghgh",
+      "id": 29
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 16:09:07",
+      "description": "kjhkjhkj",
+      "id": 30
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "26.09.2019 16:09:50",
+      "description": "gfgfgf",
+      "id": 31
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:62",
+      "description": "jhjh",
+      "id": 32
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:59",
+      "description": "rer",
+      "id": 33
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:66",
+      "description": "frfr",
+      "id": 34
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:27",
+      "description": "frfr",
+      "id": 35
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:05",
+      "description": "r4r4",
+      "id": 36
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:77",
+      "description": "frfr",
+      "id": 37
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:61",
+      "description": "frfr",
+      "id": 38
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:20",
+      "description": "fr",
+      "id": 39
+    },
+    {
+      "amount": 1,
+      "category": 1,
+      "date": "27.09.2019 11:09:20",
+      "description": "gtgt",
+      "id": 40
     }
   ]
 }

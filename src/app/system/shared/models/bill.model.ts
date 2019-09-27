@@ -1,14 +1,6 @@
 export class Bill {
   constructor(
-    private billValue: number,
-    private billCurrency: string
+    public value: number,
+    public currency: string
   ) {}
-
-  get value(): number {
-    return this.billValue;
-  }
-
-  get currency(): string {
-    return this.billCurrency;
-  }
 }
