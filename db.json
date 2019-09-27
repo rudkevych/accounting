@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": "1.0015113111111112e+341",
+    "value": 0,
     "currency": "EUR"
   },
   "categories": [
@@ -309,6 +309,70 @@
       "date": "27.09.2019 11:09:20",
       "description": "gtgt",
       "id": 40
+    },
+    {
+      "type": "outcome",
+      "amount": 17878,
+      "category": 1,
+      "date": "27.09.2019 15:09:14",
+      "description": "рпрпрп",
+      "id": 41
+    },
+    {
+      "type": "outcome",
+      "amount": 10000000000000000000,
+      "category": 1,
+      "date": "27.09.2019 15:09:58",
+      "description": "fdg",
+      "id": 42
+    },
+    {
+      "type": "outcome",
+      "amount": 0,
+      "category": 1,
+      "date": "27.09.2019 15:09:61",
+      "description": " 55555",
+      "id": 43
+    },
+    {
+      "type": "income",
+      "amount": 555,
+      "category": 1,
+      "date": "27.09.2019 15:09:60",
+      "description": " ",
+      "id": 44
+    },
+    {
+      "type": "income",
+      "amount": 555555555555555600,
+      "category": 1,
+      "date": "27.09.2019 15:09:98",
+      "description": "gtgtgt",
+      "id": 45
+    },
+    {
+      "type": "income",
+      "amount": 4.36e+38,
+      "category": 1,
+      "date": "27.09.2019 15:09:95",
+      "description": " gtgt",
+      "id": 46
+    },
+    {
+      "type": "outcome",
+      "amount": 1e+55,
+      "category": 1,
+      "date": "27.09.2019 15:09:50",
+      "description": " gtgtg",
+      "id": 47
+    },
+    {
+      "type": "outcome",
+      "amount": 120,
+      "category": 1,
+      "date": "27.09.2019 15:09:68",
+      "description": " frfr",
+      "id": 48
     }
   ]
 }

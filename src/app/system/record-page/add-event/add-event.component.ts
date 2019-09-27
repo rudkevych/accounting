@@ -7,6 +7,7 @@ import {EventsService} from '../../shared/services/events.service';
 import {BillService} from '../../shared/services/bill.service';
 import {Bill} from '../../shared/models/bill.model';
 import {mergeMap} from 'rxjs/operators';
+import {Message} from '../../../shared/models/message.model';
 
 @Component({
   selector: 'rudkevycho-add-event',
@@ -21,6 +22,8 @@ export class AddEventComponent implements OnInit {
     {type: 'outcome', label: 'Расход'}
   ];
 
+  message: Message;
+
   constructor(
     public eventsService: EventsService,
     public billService: BillService
@@ -28,6 +31,12 @@ export class AddEventComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.message = new Message('', 'danger');
+  }
+
+  private showMessage(text: string) {
+    this.message.text = text;
+    window.setTimeout(() => this.message.text = '', 5000);
   }
 
   onSubmit(form: NgForm) {
@@ -39,7 +48,7 @@ export class AddEventComponent implements OnInit {
       let value = 0;
       if (type === 'outcome') {
         if (amount > bill.value) {
-          // error
+          this.showMessage(`You do not have enough money in your account. Not enough ${amount - bill.value}`);
         } else {
           value = bill.value - amount;
         }
