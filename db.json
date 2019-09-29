@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 9991055,
+    "value": 9975140,
     "currency": "EUR"
   },
   "categories": [
@@ -25,32 +25,42 @@
     {
       "name": "Cosmetics",
       "capacity": 200,
-      "id": 2
+      "id": 3
+    },
+    {
+      "name": "Animal",
+      "capacity": 500,
+      "id": 4
+    },
+    {
+      "name": "Gifts",
+      "capacity": 1000,
+      "id": 5
     }
   ],
   "events": [
     {
-      "id": 1,
-      "type": "income",
-      "amount": 12500,
-      "category": 2,
-      "date": "12.06.2017 19:49:02",
-      "description": "Salary"
-    },
-    {
-      "id": 2,
       "type": "outcome",
-      "amount": 1300,
+      "amount": 7000,
       "category": 1,
-      "date": "13.06.2017 19:49:02",
-      "description": "Bought phone"
+      "date": "30.09.2019 00:09:93",
+      "description": "rent a house",
+      "id": 1
     },
     {
       "type": "outcome",
-      "amount": 12345,
+      "amount": 500,
       "category": 2,
-      "date": "29.09.2019 22:09:25",
-      "description": "vnfkvjnfv",
+      "date": "30.09.2019 00:09:68",
+      "description": "donut",
+      "id": 2
+    },
+    {
+      "type": "outcome",
+      "amount": 100,
+      "category": 3,
+      "date": "30.09.2019 00:09:26",
+      "description": "eyeliner",
       "id": 3
     }
   ]
