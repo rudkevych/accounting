@@ -11,4 +11,8 @@ export class EventsService {
   addEvent(event: RudkevychoEvent): Observable<RudkevychoEvent> {
     return this.http.post<RudkevychoEvent>(`http://localhost:3000/events`, event);
   }
+
+  getEvents(): Observable<RudkevychoEvent[]> {
+    return this.http.get<RudkevychoEvent[]>(`http://localhost:3000/events`);
+  }
 }
