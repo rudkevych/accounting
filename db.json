@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 10003400,
+    "value": 9991055,
     "currency": "EUR"
   },
   "categories": [
@@ -44,6 +44,14 @@
       "category": 1,
       "date": "13.06.2017 19:49:02",
       "description": "Bought phone"
+    },
+    {
+      "type": "outcome",
+      "amount": 12345,
+      "category": 2,
+      "date": "29.09.2019 22:09:25",
+      "description": "vnfkvjnfv",
+      "id": 3
     }
   ]
 }

@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BillService} from '../shared/services/bill.service';
 import {CategoriesService} from '../shared/services/categories.service';
 import {EventsService} from '../shared/services/events.service';
-import {combineLatest, Subscription} from 'rxjs';
+import {combineLatest, Observable, Subscription} from 'rxjs';
 import {Bill} from '../shared/models/bill.model';
 import {Category} from '../shared/models/category.model';
 import {RudkevychoEvent} from '../shared/models/event.model';
@@ -41,6 +41,16 @@ export class PlanningPageComponent implements OnInit, OnDestroy {
 
       this.isLoaded = true;
     });
+
+  }
+
+  getCategoryCost(category: Category): number {
+    const categoryEvents = this.events.filter(e => e.category === category.id && e.type === 'outcome');
+
+    return categoryEvents.reduce((total, e) => {
+      total += e.amount;
+      return total;
+    }, 0);
   }
 
   ngOnDestroy() {
