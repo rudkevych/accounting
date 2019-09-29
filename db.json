@@ -8,13 +8,13 @@
     }
   ],
   "bill": {
-    "value": 9975140,
+    "value": 9969440,
     "currency": "EUR"
   },
   "categories": [
     {
       "name": "House",
-      "capacity": 1000,
+      "capacity": 10000,
       "id": 1
     },
     {
@@ -62,6 +62,38 @@
       "date": "30.09.2019 00:09:26",
       "description": "eyeliner",
       "id": 3
+    },
+    {
+      "type": "outcome",
+      "amount": 2500,
+      "category": 1,
+      "date": "30.09.2019 00:09:19",
+      "description": "frfr",
+      "id": 4
+    },
+    {
+      "type": "outcome",
+      "amount": 1200,
+      "category": 2,
+      "date": "30.09.2019 00:09:79",
+      "description": "burger",
+      "id": 5
+    },
+    {
+      "type": "income",
+      "amount": 10000,
+      "category": 3,
+      "date": "30.09.2019 00:09:87",
+      "description": " vfvfv",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 12000,
+      "category": 3,
+      "date": "30.09.2019 00:09:93",
+      "description": "frfr",
+      "id": 7
     }
   ]
 }

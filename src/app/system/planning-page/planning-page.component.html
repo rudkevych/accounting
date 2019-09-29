@@ -20,18 +20,20 @@
           <div class="row" *ngFor="let c of categories">
             <div class="col-xs-6">
               <div class="n-progress">
-                <div class="progress-bar success">
+                <div class="progress-bar {{getCategoryColorClass(c)}}" [ngStyle]="{width: getCategoryPercent(c)}">
                   <span>{{c.name}}</span>
                 </div>
               </div>
             </div>
-            <div class="col-xs-6" >
+            <div class="col-xs-6">
               <p>
-                <span class="text-success">{{getCategoryCost(c)}}</span>
+                <span class="text-{{getCategoryColorClass(c)}}">{{getCategoryCost(c)}}</span>
                 из
                 <span class="text-primary">{{c.capacity | number:'1.2'}}</span>
                 |
-                осталось <span class="text-success">700.00</span> (руб.)
+                осталось <span class="text-{{getCategoryColorClass(c)}}">
+                {{c.capacity - getCategoryCost(c) | number:'1.2'}}
+              </span> (руб.)
               </p>
             </div>
           </div>
@@ -44,5 +46,5 @@
 <section
   class="section"
   *ngIf="!isLoaded">
-Loading...
+  Loading...
 </section>

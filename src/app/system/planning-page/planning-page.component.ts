@@ -2,11 +2,10 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {BillService} from '../shared/services/bill.service';
 import {CategoriesService} from '../shared/services/categories.service';
 import {EventsService} from '../shared/services/events.service';
-import {combineLatest, Observable, Subscription} from 'rxjs';
+import {combineLatest, Subscription} from 'rxjs';
 import {Bill} from '../shared/models/bill.model';
 import {Category} from '../shared/models/category.model';
 import {RudkevychoEvent} from '../shared/models/event.model';
-import {log} from 'util';
 
 @Component({
   selector: 'rudkevycho-planning-page',
@@ -51,6 +50,20 @@ export class PlanningPageComponent implements OnInit, OnDestroy {
       total += e.amount;
       return total;
     }, 0);
+  }
+
+  private getPercent(category: Category): number {
+    const percent = (100 * this.getCategoryCost(category)) / category.capacity;
+    return percent > 100 ? 100 : percent;
+  }
+
+  getCategoryPercent(category: Category) {
+    return this.getPercent(category) + '%';
+  }
+
+  getCategoryColorClass(category: Category): string {
+    const percent = this.getPercent(category);
+    return percent < 60 ? 'success' : percent >= 100 ? 'danger' : 'warning';
   }
 
   ngOnDestroy() {
