@@ -1,32 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {CategoriesService} from '../../shared/services/categories.service';
+import {combineLatest} from 'rxjs';
+import {Category} from '../../shared/models/category.model';
+import {RudkevychoEvent} from '../../shared/models/event.model';
+import {EventsService} from '../../shared/services/events.service';
 
 @Component({
   selector: 'rudkevycho-history-chart',
   templateUrl: './history-chart.component.html',
   styleUrls: ['./history-chart.component.scss']
 })
-export class HistoryChartComponent implements OnInit {
+export class HistoryChartComponent {
 
-  view: any[] = [545, 355];
-
-  data = [
-    {
-      name: 'Germany',
-      value: 8940000
-    },
-    {
-      name: 'USA',
-      value: 5000000
-    },
-    {
-      name: 'France',
-      value: 7200000
-    }
-  ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() data;
 
 }

@@ -3,8 +3,12 @@
     History page <span class="sparkline bar"></span>
   </h3>
 </div>
-<rudkevycho-history-chart></rudkevycho-history-chart>
-<rudkevycho-history-events></rudkevycho-history-events>
-<rudkevycho-history-filter></rudkevycho-history-filter>
+<div *ngIf="!isLoaded" class="text-center">Loading...</div>
+<div *ngIf="isLoaded">
+  <rudkevycho-history-chart [data]="chartData"></rudkevycho-history-chart>
+  <rudkevycho-history-events></rudkevycho-history-events>
+  <rudkevycho-history-filter></rudkevycho-history-filter>
+</div>
+
 
 
