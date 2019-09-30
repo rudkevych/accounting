@@ -18,9 +18,11 @@ import {Subscription} from 'rxjs';
 export class AddEventComponent implements OnInit, OnDestroy {
   @Input() categories: Category[] = [];
 
+  //TODO: refactor this
+
   types = [
-    {type: 'income', label: 'Доход'},
-    {type: 'outcome', label: 'Расход'}
+    {type: 'income', label: 'Income'},
+    {type: 'outcome', label: 'Outcome'}
   ];
 
   message: Message;

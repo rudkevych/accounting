@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
     this.route.queryParams.subscribe((params: Params) => {
       if (params.nowCanLogin) {
-        this.showMessage(new Message('Zahodi Daragoj', 'success'));
+        this.showMessage(new Message('Congrats! Now you can sign in.', 'success'));
       }
     });
 
@@ -60,10 +60,10 @@ export class LoginComponent implements OnInit {
             this.authService.login();
             this.router.navigate(['/system', 'bill']);
           } else {
-            this.showMessage(new Message('Пароль не верный', 'danger'));
+            this.showMessage(new Message('Password is not correct. Try again', 'danger'));
           }
         } else {
-          this.showMessage(new Message('Пароль не верный', 'danger'));
+          this.showMessage(new Message('Password is not correct', 'danger'));
         }
       });
   }
