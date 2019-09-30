@@ -6,7 +6,10 @@
 <div *ngIf="!isLoaded" class="text-center">Loading...</div>
 <div *ngIf="isLoaded">
   <rudkevycho-history-chart [data]="chartData"></rudkevycho-history-chart>
-  <rudkevycho-history-events></rudkevycho-history-events>
+  <rudkevycho-history-events
+    [categories]="categories"
+    [events]="events"
+  ></rudkevycho-history-events>
   <rudkevycho-history-filter></rudkevycho-history-filter>
 </div>
 

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Category} from '../../shared/models/category.model';
+import {RudkevychoEvent} from '../../shared/models/event.model';
 
 @Component({
   selector: 'rudkevycho-history-events',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoryEventsComponent implements OnInit {
 
-  constructor() { }
+  @Input() categories: Category[] = [];
+  @Input() events: RudkevychoEvent[] = [];
+
+  constructor() {
+  }
 
   ngOnInit() {
+    console.log('events', this.events);
+    console.log('categories', this.categories);
+    this.events.forEach((e) => {
+      e.categoryName = this.categories.find(c => c.id === e.category).name;
+    });
+  }
+
+  getEventClass(event: RudkevychoEvent) {
+    if (event.type === 'outcome') {
+      return 'label label-danger';
+    }
+    return 'label label-success';
   }
 
 }
